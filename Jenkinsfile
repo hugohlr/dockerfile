@@ -7,7 +7,7 @@ node {
         app = docker.build("tag1/nginx")
     }
     stage('Test image') {
-        //docker.image("tag1/nginx").WithRun('-p 80:80') { c ->
+        docker.image("tag1/nginx").WithDockerContener('-p 80:80') { c ->
         sh 'docker ps'
         sh 'curl localhost'
         //}
