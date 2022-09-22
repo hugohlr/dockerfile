@@ -10,6 +10,6 @@ node {
         docker.image("tag1/nginx").WithDockerContener('-p 80:80') { c ->
         sh 'docker ps'
         sh 'curl localhost'
-        //}
+        }
     }
 }
