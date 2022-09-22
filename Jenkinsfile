@@ -8,5 +8,6 @@ node {
     }
     stage('Test image') {
         withDockerContainer("tag1/nginx"){ sh "echo 'hello world'" }
+        sh "docker ps"
     }
 }
