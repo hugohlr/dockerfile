@@ -4,10 +4,10 @@ node {
         checkout scm
     }
     stage('Build image') {
-        app = docker.build("bitnami/nginx")
+        app = docker.build("tag1/nginx")
     }
     stage('Test image') {
-        docker.image("bitnami/nginx").WithRun('-p 80:80') { c ->
+        //docker.image("tag1/nginx").WithRun('-p 80:80') { c ->
         sh 'docker ps'
         sh 'curl localhost'
         }
