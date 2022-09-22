@@ -7,6 +7,6 @@ node {
         app = docker.build("tag1/nginx")
     }
     stage('Test image') {
-        WithDockerContener(image:'tag1/nginx')
+        WithDockerContainer(image:'tag1/nginx')
     }
 }
